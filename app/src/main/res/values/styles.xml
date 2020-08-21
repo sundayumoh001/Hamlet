@@ -1,0 +1,27 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="titleTextColor">#fff</item>
+        <item name="colorPrimary">#FF5722</item>
+        <item name="colorPrimaryDark">#F44336</item>
+        <item name="colorAccent">#FF9800</item>
+
+
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+
+    </style>
+
+    <style name="ProfileCardStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearance">@style/ShapeAppearanceOverlay.MaterialCardView.cut
+        </item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">50dp</item>
+    </style>
+
+
+</resources>

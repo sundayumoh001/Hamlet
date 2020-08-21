@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:id="@+id/tool_bar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            android:background="#FFF"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent">-->
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:src="@drawable/boniface" />-->
+
+<!--        </com.google.android.material.appbar.MaterialToolbar>-->
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerview_id"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_width="match_parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_height="match_parent"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

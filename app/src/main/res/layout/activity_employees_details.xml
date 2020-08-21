@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/arrow_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_arrow_back"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/employees_picture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            app:civ_border_color="#EEF1F4"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/arrow_back"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/employees_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Boniface Bassey"
+            android:textColor="#EEF1F4"
+            android:textSize="24sp"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/employees_picture"
+            app:layout_constraintTop_toBottomOf="@id/employees_picture"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/employees_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/bcase"
+            android:drawableLeft="@drawable/bcase"
+            android:drawablePadding="8dp"
+            android:text="Android Developer"
+            android:textColor="#EEF1F4"
+            android:textSize="18sp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@id/employees_name"
+            app:layout_constraintRight_toRightOf="@id/employees_name"
+            app:layout_constraintTop_toBottomOf="@id/employees_name" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/name_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="28dp"
+            app:cardBackgroundColor="#2A7CF8"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:contentPadding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/employees_role"
+            app:layout_constraintVertical_bias="0.0">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/Dh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Hired:"
+                    android:textColor="#EEF1F4"
+                    android:textSize="14sp"
+                    app:layout_constraintHorizontal_bias="0.14"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/view_1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/date_hired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="12/09/2000"
+                    android:textColor="#EEF1F4"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="@id/Dh"
+                    app:layout_constraintRight_toRightOf="@id/Dh"
+                    app:layout_constraintTop_toTopOf="@id/Dh" />
+
+                <View
+                    android:id="@+id/view_1"
+                    android:layout_width="1dp"
+                    android:background="#FFF"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/date_hired"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/salary_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salary"
+                    android:layout_marginLeft="15dp"
+                    app:layout_constraintLeft_toRightOf="@id/view_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="#EEF1F4"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="$300"
+                    android:textStyle="bold"
+                    android:textColor="#EEF1F4"
+                    app:layout_constraintLeft_toLeftOf="@id/salary_tv"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toTopOf="@id/Dh" />
+
+                <View
+                    android:id="@+id/view_2"
+                    android:layout_width="1dp"
+                    android:background="#FFF"
+                    app:layout_constraintLeft_toRightOf="@id/salary_tv"
+                    android:layout_marginLeft="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="match_parent"/>
+
+
+                <TextView
+                    android:id="@+id/employment_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Employment Type"
+                    android:layout_marginLeft="15dp"
+                    app:layout_constraintLeft_toRightOf="@id/view_2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textColor="#EEF1F4"
+
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/employment_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="FULL-TIME"
+                    android:textStyle="bold"
+                    android:textColor="#EEF1F4"
+                    app:layout_constraintLeft_toLeftOf="@id/employment_type_tv"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintTop_toTopOf="@id/Dh" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/personal_detail_tv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="28dp"
+
+            android:layout_marginTop="15dp"
+            android:background="@drawable/send_email"
+            android:gravity="center"
+            android:textColor="#0065FC"
+            android:textStyle="bold"
+            android:text="SEND AN EMAIL"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/name_cardView" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/personal_detail_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:contentPadding="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personal_detail_tv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/employees_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginTop="10dp"
+                    android:text="Date of birth:"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/employees_dob_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="date"
+                    android:text="21/8/1905"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/employees_dob"
+                    app:layout_constraintLeft_toRightOf="@id/employees_dob"
+                    app:layout_constraintTop_toTopOf="@id/employees_dob"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+                <TextView
+                    android:id="@+id/employees_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Gender:"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/employees_dob_text" />
+
+
+                <TextView
+                    android:id="@+id/employees_gender_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Male"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/employees_gender"
+                    app:layout_constraintLeft_toRightOf="@id/employees_gender"
+                    app:layout_constraintTop_toTopOf="@id/employees_gender"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/Dh"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="10dp"-->
+                <!--                    android:text="Date Hired:"-->
+                <!--                    android:textColor="#000"-->
+                <!--                    android:textSize="18sp"-->
+                <!--                    android:textStyle="bold"-->
+                <!--                    app:layout_constraintLeft_toLeftOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@id/employees_gender" />-->
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/date_hired"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="10dp"-->
+                <!--                    android:layout_marginLeft="10dp"-->
+                <!--                    android:text="12/09/2000"-->
+                <!--                    android:textColor="#000"-->
+                <!--                    android:textSize="18sp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@id/Dh"-->
+                <!--                    app:layout_constraintLeft_toRightOf="@id/Dh"-->
+                <!--                    app:layout_constraintTop_toTopOf="@id/Dh" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="Department:"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintLeft_toLeftOf="parent" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/department"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:text="Mobile"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textSize="18sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/salary"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:text="Salary:"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    app:layout_constraintLeft_toLeftOf="parent" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:text="$5000"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:textSize="18sp"/>-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/contact_info_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Contact Information"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/personal_detail_cardview" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contact_info_tv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/email_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="email"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="officialboniface@gmail.com"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/email_tv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<com.google.android.material.card.MaterialCardView-->
+    <!--    android:id="@+id/header_card_design"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    style="@style/ProfileCardStyle"-->
+    <!--    app:cardBackgroundColor="#CCFF5722"-->
+    <!--    app:layout_constraintRight_toRightOf="parent"-->
+    <!--    app:layout_constraintTop_toTopOf="parent"-->
+    <!--    app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--    android:layout_height="200dp"/>-->
+
+
+</androidx.core.widget.NestedScrollView>
